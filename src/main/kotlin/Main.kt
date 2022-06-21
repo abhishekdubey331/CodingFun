@@ -7,4 +7,7 @@ fun main(args: Array<String>) {
      *
      */
     println("Sorted array is --> " + findMissingNum.bubbleSort(arrayOf(-34, -55, 44, 22, -100)).asList())
+
+    val array = arrayOf(1, 2, 3, 4, 5)
+    findMissingNum.reverseArray(array, array.size)
 }

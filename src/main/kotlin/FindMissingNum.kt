@@ -32,4 +32,18 @@ class FindMissingNum {
         }
         return array
     }
+
+    /**
+     *  Reverse an array without recursion
+     *
+     *   [1,2,3,4,5]
+     *
+     */
+
+    fun reverseArray(array: Array<Int>, size: Int) {
+        if (size > 0) {
+            println(array[size - 1])
+            reverseArray(array, size - 1)
+        }
+    }
 }
