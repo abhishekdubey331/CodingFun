@@ -47,7 +47,20 @@ class CodeFunPrograms {
     }
 
     /***
-     *    Program to return two numbers from an array whose sum is given number
+     *
+     *   Program to return two numbers from an array whose sum is given number
+     *    [1,2,3,4,5]  7
+     *
      */
-
+    fun twoSum(array: Array<Int>, requiredSum: Int) {
+        val hashMap: HashMap<Int, Int> = HashMap()
+        for (i in array.indices + 1) {
+            if (hashMap.containsKey(array[i])) {
+                println((requiredSum - array[i]).toString() + " " + array[i].toString())
+                break;
+            } else {
+                hashMap[requiredSum - array[i]] = array[i]
+            }
+        }
+    }
 }
