@@ -1,4 +1,4 @@
-class FindMissingNum {
+class CodeFunPrograms {
 
     /***
      *
@@ -39,11 +39,15 @@ class FindMissingNum {
      *   [1,2,3,4,5]
      *
      */
-
     fun reverseArray(array: Array<Int>, size: Int) {
         if (size > 0) {
             println(array[size - 1])
             reverseArray(array, size - 1)
         }
     }
+
+    /***
+     *    Program to return two numbers from an array whose sum is given number
+     */
+
 }
