@@ -70,13 +70,26 @@ class CodeFunPrograms {
     fun swapAlternateNumbersInArray(array: Array<Int>) {
         array.forEachIndexed { i, item ->
             try {
-                if (i % 2 == 0){
-                    val temp = array[i+1]
-                    array[i+1] = item
+                if (i % 2 == 0) {
+                    val temp = array[i + 1]
+                    array[i + 1] = item
                     array[i] = temp
                 }
-            } catch (ex : Exception){ }
+            } catch (ex: Exception) {
+            }
         }
         println(array.asList())
+    }
+
+    /***
+     *  Program to find a number which is present only once in an array
+     *  [3,3,5,1,1]
+     */
+    fun numberPresentOnce(array: Array<Int>) {
+        var ans = 0
+        array.forEachIndexed { _, item ->
+                ans = ans xor item
+        }
+        println(ans)
     }
 }
