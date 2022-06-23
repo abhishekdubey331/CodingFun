@@ -15,7 +15,6 @@ class CodeFunPrograms {
         return expectedSum - arraySum
     }
 
-
     /**
      *    Sort an array using bubble sort
      *
@@ -88,8 +87,24 @@ class CodeFunPrograms {
     fun numberPresentOnce(array: Array<Int>) {
         var ans = 0
         array.forEachIndexed { _, item ->
-                ans = ans xor item
+            ans = ans xor item
         }
         println(ans)
+    }
+
+    /***
+     *  Program to print true if an array has all numbers unique and false in case numbers are not unique
+     */
+    fun uniqueNumberOfElements(array: Array<Int>): Boolean {
+        val hashMap = HashMap<Int, Int>()
+        var allUniqueNumbers = true
+        array.forEachIndexed { _, item ->
+            if (hashMap.containsKey(item).not()) {
+                hashMap[item] = item
+            } else {
+                allUniqueNumbers = false
+            }
+        }
+        return allUniqueNumbers
     }
 }
