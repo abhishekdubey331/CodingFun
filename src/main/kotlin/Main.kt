@@ -11,4 +11,5 @@ fun main(args: Array<String>) {
     val array = arrayOf(1, 2, 3, 4, 5)
     codeFunPrograms.reverseArray(array, array.size)
     codeFunPrograms.twoSum(arrayOf(1, 2, 3, 4, 5), 3)
+    codeFunPrograms.swapAlternateNumbersInArray(arrayOf(2, 1, 4, 3, 5))
 }

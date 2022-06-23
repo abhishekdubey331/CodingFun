@@ -63,4 +63,20 @@ class CodeFunPrograms {
             }
         }
     }
+
+    /***
+     *   Swap alternate numbers in an array
+     */
+    fun swapAlternateNumbersInArray(array: Array<Int>) {
+        array.forEachIndexed { i, item ->
+            try {
+                if (i % 2 == 0){
+                    val temp = array[i+1]
+                    array[i+1] = item
+                    array[i] = temp
+                }
+            } catch (ex : Exception){ }
+        }
+        println(array.asList())
+    }
 }
