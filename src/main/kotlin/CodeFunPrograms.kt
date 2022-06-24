@@ -107,4 +107,16 @@ class CodeFunPrograms {
         }
         return allUniqueNumbers
     }
+
+    /***
+     *  Fibonacci program
+     *   5 ! = 5 * 4 * 3 * 2 * 1
+     */
+    fun fibonacciNumber(number: Int): Int {
+        return if (number - 1 >= 1) {
+            number * fibonacciNumber(number - 1)
+        } else {
+            1
+        }
+    }
 }
