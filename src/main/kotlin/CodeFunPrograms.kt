@@ -33,7 +33,7 @@ class CodeFunPrograms {
     }
 
     /**
-     *  Reverse an array without recursion
+     *  Reverse an array without for loop
      *
      *   [1,2,3,4,5]
      *
@@ -119,4 +119,22 @@ class CodeFunPrograms {
             1
         }
     }
+
+    /***
+     *  Longest Common Prefix
+     */
+    fun longestCommonPrefix(strs: Array<String>): String {
+        if(strs.size<0)
+            return ""
+
+        var smallestString = strs[0]
+
+        for(i in 1 until strs.size){
+            while(strs[i].indexOf(smallestString)!=0){
+                smallestString = smallestString.substring(0,smallestString.length-1)
+            }
+        }
+        return smallestString
+    }
+
 }
