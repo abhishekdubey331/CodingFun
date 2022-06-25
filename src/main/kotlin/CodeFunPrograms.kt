@@ -125,14 +125,14 @@ class CodeFunPrograms {
     /***
      *  Longest Common Prefix
      */
-    fun longestCommonPrefix(strs: Array<String>): String {
-        if (strs.isNullOrEmpty())
+    fun longestCommonPrefix(array: Array<String>): String {
+        if (array.isNullOrEmpty())
             return ""
 
-        var smallestString = strs[0]
+        var smallestString = array[0]
 
-        for (i in 1 until strs.size) {
-            while (strs[i].indexOf(smallestString) != 0) {
+        for (i in 1 until array.size) {
+            while (array[i].indexOf(smallestString) != 0) {
                 smallestString = smallestString.substring(0, smallestString.length - 1)
             }
         }
