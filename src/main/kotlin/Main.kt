@@ -15,6 +15,8 @@ fun main(args: Array<String>) {
     val result = codeFunPrograms.uniqueNumberOfElements(arrayOf(2, 3, 4, 5, 6))
     println(result)
 
-    println(codeFunPrograms.fibonacciNumber(4))*/
-    println(codeFunPrograms.longestCommonPrefix(arrayOf("flower","flow","flight")))
+    println(codeFunPrograms.fibonacciNumber(4))
+    println(codeFunPrograms.longestCommonPrefix(arrayOf("flower","flow","flight")))*/
+
+    println(codeFunPrograms.isValid("([}}])"))
 }
