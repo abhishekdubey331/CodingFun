@@ -1,6 +1,6 @@
 fun main(args: Array<String>) {
     val codeFunPrograms = CodeFunPrograms()
-   /* println("Missing Number in Array is -> " + codeFunPrograms.getMissingNumFromArray(arrayOf(1, 2, 3, 5), 5))
+    println("Missing Number in Array is -> " + codeFunPrograms.getMissingNumFromArray(arrayOf(1, 2, 3, 5), 5))
 
     println("Sorted array is --> " + codeFunPrograms.bubbleSort(arrayOf(-34, -55, 44, 22, -100)).asList())
 
@@ -16,7 +16,8 @@ fun main(args: Array<String>) {
     println(result)
 
     println(codeFunPrograms.fibonacciNumber(4))
-    println(codeFunPrograms.longestCommonPrefix(arrayOf("flower","flow","flight")))*/
+    println(codeFunPrograms.longestCommonPrefix(arrayOf("flower", "flow", "flight")))
 
     println(codeFunPrograms.isValid("([}}])"))
+    codeFunPrograms.nextGreaterElement(arrayOf(13, 7, 6, 12))
 }

@@ -1,5 +1,4 @@
 import java.util.*
-import kotlin.collections.HashMap
 
 class CodeFunPrograms {
 
@@ -144,24 +143,52 @@ class CodeFunPrograms {
      *  "([}}])"
      */
     fun isValid(s: String): Boolean {
-        if(s.length%2 != 0 ) return false
+        if (s.length % 2 != 0) return false
 
-        val stack : Stack<Char> = Stack()
+        val stack: Stack<Char> = Stack()
         val charArray = s.toCharArray()
 
-        for(c in charArray){
-            if( c == '(' || c == '{'  || c == '[' ){
+        for (c in charArray) {
+            if (c == '(' || c == '{' || c == '[') {
                 stack.push(c)
-            } else if(c == ')' && stack.isEmpty().not() && stack.peek() == '('){
+            } else if (c == ')' && stack.isEmpty().not() && stack.peek() == '(') {
                 stack.pop()
-            } else if(c == '}' && stack.isEmpty().not() && stack.peek() == '{'){
+            } else if (c == '}' && stack.isEmpty().not() && stack.peek() == '{') {
                 stack.pop()
-            } else if(c == ']' && stack.isEmpty().not() && stack.peek() == '['){
+            } else if (c == ']' && stack.isEmpty().not() && stack.peek() == '[') {
                 stack.pop()
             } else {
                 stack.push(c)
             }
         }
         return stack.isEmpty()
+    }
+
+    /***
+     *   Next Greater Element and if no greater element exists then -1
+     *   [13, 7, 6, 12]
+     *
+     *   [-1, 12, 12, -1]
+     *
+     */
+
+    fun nextGreaterElement(array: Array<Int>) {
+        var greatestNum = array[array.size - 1]
+        array[array.size - 1] = -1
+        for (i in array.size - 2 downTo 0) {
+            if (array[i] < greatestNum) {
+                if ((i-1)>-1 && array[i - 1] < array[i]) {
+                    val temp = array[i]
+                    array[i] = greatestNum
+                    greatestNum = temp
+                } else {
+                    array[i] = greatestNum
+                }
+            } else {
+                greatestNum = array[i]
+                array[i] = -1
+            }
+        }
+        println(array.asList())
     }
 }
