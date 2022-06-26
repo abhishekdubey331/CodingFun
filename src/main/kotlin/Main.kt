@@ -21,7 +21,7 @@ fun main(args: Array<String>) {
     println(codeFunPrograms.isValid("([}}])"))
     codeFunPrograms.nextGreaterElement(arrayOf(13, 7, 6, 12))
 */
-    println(codeFunPrograms.twoSumInSortedArray(arrayOf(2, 3, 4, 5, 6),9).asList())
+    println(codeFunPrograms.twoSumInSortedArray(arrayOf(2, 3, 4, 5, 6),-1))
 }
 
 

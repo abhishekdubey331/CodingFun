@@ -192,19 +192,19 @@ class CodeFunPrograms {
         println(array.asList())
     }
 
-    fun twoSumInSortedArray(array: Array<Int>, sum: Int): Array<Int> {
+    fun twoSumInSortedArray(array: Array<Int>, sum: Int): String {
         var i = 0
         var j = array.size - 1
 
         for (index in 0 until array.size - 1) {
             if (array[i] + array[j] == sum) {
-                return arrayOf(array[i], array[j])
+                return "Numbers found for given sum : ${array[i]}, ${array[j]}"
             } else if (array[i] + array[j] < sum) {
                 i++
             } else if (array[i] + array[j] > sum) {
                 j--
             }
         }
-        return arrayOf(-1, -1)
+        return "No numbers found for given sum: $sum"
     }
 }
