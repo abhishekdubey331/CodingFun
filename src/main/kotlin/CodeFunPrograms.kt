@@ -207,4 +207,34 @@ class CodeFunPrograms {
         }
         return "No numbers found for given sum: $sum"
     }
+
+    /**
+     *   LeetCode Search Insert Position
+     *
+     */
+    fun searchInsert(nums: IntArray, target: Int): Int {
+        var i = 0
+        var j = nums.size - 1
+
+        nums.forEachIndexed { num, index ->
+            if (target > nums[i] && i < nums.size - 1) {
+                i++
+            }
+            if (target < nums[j] && j > 0) {
+                j--
+            }
+        }
+
+        return if (target < nums[j]) {
+            j
+        } else if (i == j) {
+            if (target == nums[i]) {
+                i
+            } else {
+                i + 1
+            }
+        } else {
+            i
+        }
+    }
 }

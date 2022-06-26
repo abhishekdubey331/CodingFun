@@ -26,6 +26,8 @@ fun main(args: Array<String>) {
     codeFunPrograms.nextGreaterElement(arrayOf(13, 7, 6, 12))
 
     println(codeFunPrograms.twoSumInSortedArray(arrayOf(2, 3, 4, 5, 6), -1))
+
+    println(codeFunPrograms.searchInsert(intArrayOf(1,3,5,6),5))
 }
 
 
