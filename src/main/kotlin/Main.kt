@@ -1,6 +1,6 @@
 fun main(args: Array<String>) {
     val codeFunPrograms = CodeFunPrograms()
-    println("Missing Number in Array is -> " + codeFunPrograms.getMissingNumFromArray(arrayOf(1, 2, 3, 5), 5))
+    /*println("Missing Number in Array is -> " + codeFunPrograms.getMissingNumFromArray(arrayOf(1, 2, 3, 5), 5))
 
     println("Sorted array is --> " + codeFunPrograms.bubbleSort(arrayOf(-34, -55, 44, 22, -100)).asList())
 
@@ -20,6 +20,8 @@ fun main(args: Array<String>) {
 
     println(codeFunPrograms.isValid("([}}])"))
     codeFunPrograms.nextGreaterElement(arrayOf(13, 7, 6, 12))
+*/
+    println(codeFunPrograms.twoSumInSortedArray(arrayOf(2, 3, 4, 5, 6),9).asList())
 }
 
 

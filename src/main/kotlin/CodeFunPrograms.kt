@@ -177,7 +177,7 @@ class CodeFunPrograms {
         array[array.size - 1] = -1
         for (i in array.size - 2 downTo 0) {
             if (array[i] < greatestNum) {
-                if ((i-1)>-1 && array[i - 1] < array[i]) {
+                if ((i - 1) > -1 && array[i - 1] < array[i]) {
                     val temp = array[i]
                     array[i] = greatestNum
                     greatestNum = temp
@@ -190,5 +190,21 @@ class CodeFunPrograms {
             }
         }
         println(array.asList())
+    }
+
+    fun twoSumInSortedArray(array: Array<Int>, sum: Int): Array<Int> {
+        var i = 0
+        var j = array.size - 1
+
+        for (index in 0 until array.size - 1) {
+            if (array[i] + array[j] == sum) {
+                return arrayOf(array[i], array[j])
+            } else if (array[i] + array[j] < sum) {
+                i++
+            } else if (array[i] + array[j] > sum) {
+                j--
+            }
+        }
+        return arrayOf(-1, -1)
     }
 }
