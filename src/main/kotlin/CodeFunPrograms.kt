@@ -249,12 +249,48 @@ class CodeFunPrograms {
 
         for (num in nums) {
             if (num > max) {
-                max = max(max,num)
+                max = max(max, num)
             }
             if (num < min) {
-                min = min(min,num)
+                min = min(min, num)
             }
         }
         return "Max number in array is : $max\nMin number in array is : $min"
     }
+
+    /**
+     *  Program to check if out of two given array's second array has square numbers of first array
+     *
+     *   [1,2,4] [1,4,16]
+     *
+     */
+    fun checkIfArrayHasSquares(array1: IntArray, array2: IntArray): Boolean {
+        val hashMap: HashMap<Int, Int> = HashMap()
+        var isValid = true
+
+        for (num in array1) {
+            hashMap[num * num]?.let {
+                hashMap[num * num] = it + 1
+            } ?: run {
+                hashMap[num * num] = 1
+            }
+        }
+        var counterForCurrentElem = 0
+        for (i in array2.indices) {
+            if (hashMap.contains(array2[i])) {
+                counterForCurrentElem++
+            } else {
+                isValid = false
+                break
+            }
+            if (i == array2.size - 1 && counterForCurrentElem != hashMap[array2[i]]) {
+                isValid = false
+                break
+            } else {
+                counterForCurrentElem = 0
+            }
+        }
+        return isValid
+    }
+
 }

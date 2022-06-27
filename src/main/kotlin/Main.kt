@@ -30,6 +30,8 @@ fun main(args: Array<String>) {
     println(codeFunPrograms.searchInsert(intArrayOf(1, 3, 5, 6), 5))
 
     println(codeFunPrograms.minMaxFromArray(intArrayOf(1, 3, 5, 6)))
+
+    println(codeFunPrograms.checkIfArrayHasSquares(intArrayOf(1, 3, 5, 6), intArrayOf(1, 25, 9, 36)))
 }
 
 
