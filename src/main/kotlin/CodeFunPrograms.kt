@@ -1,4 +1,6 @@
 import java.util.*
+import kotlin.math.max
+import kotlin.math.min
 
 class CodeFunPrograms {
 
@@ -236,5 +238,23 @@ class CodeFunPrograms {
         } else {
             i
         }
+    }
+
+    /***
+     *   Program to find largest and smallest number in an unsorted integer array
+     */
+    fun minMaxFromArray(nums: IntArray): String {
+        var min = Int.MAX_VALUE
+        var max = Int.MIN_VALUE
+
+        for (num in nums) {
+            if (num > max) {
+                max = max(max,num)
+            }
+            if (num < min) {
+                min = min(min,num)
+            }
+        }
+        return "Max number in array is : $max\nMin number in array is : $min"
     }
 }
