@@ -11,7 +11,6 @@ fun main(args: Array<String>) {
 
     codeFunPrograms.swapAlternateNumbersInArray(arrayOf(2, 1, 4, 3, 5))
 
-
     codeFunPrograms.numberPresentOnce(arrayOf(2, 2, 4, 3, 3))
 
     val result = codeFunPrograms.uniqueNumberOfElements(arrayOf(2, 3, 4, 5, 6))
