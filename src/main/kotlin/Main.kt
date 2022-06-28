@@ -31,6 +31,8 @@ fun main(args: Array<String>) {
     println(codeFunPrograms.minMaxFromArray(intArrayOf(1, 3, 5, 6)))
 
     println(codeFunPrograms.checkIfArrayHasSquares(intArrayOf(1, 3, 5, 6), intArrayOf(1, 25, 9, 36)))
+
+    codeFunPrograms.getExtraString("abcd","cbdad")
 }
 
 

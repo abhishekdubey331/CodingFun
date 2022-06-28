@@ -293,4 +293,44 @@ class CodeFunPrograms {
         return isValid
     }
 
+    /***
+     *    Find one extra character in a string
+     *    Given two strings which are of lengths n and n+1.
+     *    The second string contains all the character of the first string, but there is one extra character.
+     *    Your task to find the extra character in the second string.
+     *
+     *    Input : string strA = "abcd";
+    string strB = "cbdae";
+    Output : e
+     */
+    fun getExtraString(string1: String, string2: String) {
+        val firstCharArray = string1.toCharArray()
+        val secondCharArray = string2.toCharArray()
+
+        val firstMap = HashMap<Char, Int>()
+        val secondMap = HashMap<Char, Int>()
+
+        for (c in firstCharArray) {
+            firstMap[c]?.let {
+                firstMap[c] = it + 1
+            } ?: run {
+                firstMap[c] = 1
+            }
+        }
+
+        for (i in secondCharArray.indices) {
+            secondMap[secondCharArray[i]]?.let {
+                secondMap[secondCharArray[i]] = it + 1
+            } ?: run {
+                secondMap[secondCharArray[i]] = 1
+            }
+        }
+
+        val keySet = secondMap.keys
+        for (key in keySet) {
+            if (secondMap[key] != firstMap[key]) {
+                println(key)
+            }
+        }
+    }
 }
