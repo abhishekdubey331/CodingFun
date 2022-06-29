@@ -333,4 +333,49 @@ class CodeFunPrograms {
             }
         }
     }
+
+    /**
+    Two strings are anagram
+    Input: s = "anagram", t = "nagaram"
+    Output: true
+     */
+
+
+    fun isAnagram(s: String, t: String) {
+        if (s.length != t.length) {
+            println("$s and $t are not anagram strings")
+            return
+        }
+
+        val firstCharArray = s.toCharArray()
+        val secondCharArray = t.toCharArray()
+        val firstMap = HashMap<Char, Int>()
+        val secondMap = HashMap<Char, Int>()
+
+        for (i in firstCharArray.indices) {
+            if (firstMap[firstCharArray[i]] != null) {
+                firstMap[firstCharArray[i]] = firstMap[firstCharArray[i]]!! + 1
+            } else {
+                firstMap[firstCharArray[i]] = 1
+            }
+
+            if (secondMap[secondCharArray[i]] != null) {
+                secondMap[secondCharArray[i]] = secondMap[secondCharArray[i]]!! + 1
+            } else {
+                secondMap[secondCharArray[i]] = 1
+            }
+        }
+
+        val keySet = firstMap.keys
+
+        for (key in keySet) {
+            if (firstMap[key] != secondMap[key]) {
+                println("$s and $t are not anagram strings")
+                return
+            } else {
+                println("$s and $t are anagram strings")
+                return
+            }
+        }
+    }
 }
