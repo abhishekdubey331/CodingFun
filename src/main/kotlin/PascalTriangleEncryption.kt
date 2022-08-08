@@ -1,8 +1,6 @@
 /***
  *
- *     [4,5,6,7]
- *
- *     [9,11,13]
+ *     [4,5,6,7] , [9,11,13]
  *
  *     [10,4]
  *
@@ -18,6 +16,10 @@ class PascalTriangleEncryption {
     }
 
     private fun encrypt(mutableList: MutableList<Int>) {
+        if (mutableList.size == 2) {
+            println(mutableList)
+            return
+        }
         val newList = mutableListOf<Int>()
         mutableList.forEachIndexed { index, _ ->
             if (index < mutableList.size - 1) {
@@ -29,16 +31,11 @@ class PascalTriangleEncryption {
                 newList.add(mutableList[index])
             }
         }
-        if (newList.size > 2) {
-            encrypt(newList)
-        } else {
-            println(newList)
-        }
+        encrypt(newList)
     }
 }
 
-
 fun main() {
     val pascalTriangle = PascalTriangleEncryption()
-    pascalTriangle.getEncryptedString(intArrayOf(4, 5, 6, 7))
+    pascalTriangle.getEncryptedString(intArrayOf(4, 5))
 }
